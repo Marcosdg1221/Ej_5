@@ -3,10 +3,11 @@ package ejercicio1;
 import java.util.*; //Importamos el java.util que necesitamos
 
 public class Buscaminas {
+	static int tabla2[] = new int[20]; //Esta tabla será la que se actualice y se le enseñe al jugador
 	public static int[] ponMinasPistas(int[] tabla) {
 		int pos[] = new int[6];
 		for (int num = 0; num < pos.length; num++) { // Spawnea las posiciones de las minas, de 1 a 20 sin repetir.
-			pos[num] = (int) (Math.random() * 21); // entre cero y 20
+			pos[num] = (int) (Math.random() * 20); // entre cero y 19 (recordemos que la tabla empieza por cero, por lo que son hasta 19.
 			for (int n = 0; n < pos.length; n++) { // Por si se repite, se vuelve a repetir la tabla y si se repite el
 													// nº generado, vuelve a generar otro.
 				if (pos[num] == pos[n]) {
@@ -37,8 +38,6 @@ public class Buscaminas {
 			return -1; //-1 significa que ha perdido
 		}
 		else {
-			int tabla2[] = new int[20];
-			
 			//Ahora sólo debes copiar la casilla seleccionada de la tabla a la tabla 2
 			
 			tabla2[seleccionar]=tabla[seleccionar];
