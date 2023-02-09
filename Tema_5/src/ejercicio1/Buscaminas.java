@@ -3,8 +3,8 @@ package ejercicio1;
 import java.util.*; //Importamos el java.util que necesitamos
 
 public class Buscaminas {
-	static int tabla2[] = new int[20]; //Esta tabla será la que se actualice y se le enseñe al jugador
-	public static int[] ponMinasPistas(int[] tabla) {
+	static char tabla2[] = new char[20];
+	public static char[] ponMinasPistas(char[] tabla) {
 		int pos[] = new int[6];
 		for (int num = 0; num < pos.length; num++) { // Spawnea las posiciones de las minas, de 1 a 20 sin repetir.
 			pos[num] = (int) (Math.random() * 20); // entre cero y 19 (recordemos que la tabla empieza por cero, por lo que son hasta 19.
@@ -15,9 +15,8 @@ public class Buscaminas {
 				}
 			}
 		}
-
 		for (int n = 0; n < pos.length-1; n++) {
-			tabla[pos[n]] = -1; // -1 representa que hay una mina allí.
+			tabla[pos[n]] = '*'; // -1 representa que hay una mina allí.
 		}
 		for (int n = 1; n < tabla.length; n++) {
 			if (tabla[n] == -1 & tabla[n-1]!=-1) { // -1 representa que hay una mina allí.
@@ -31,7 +30,7 @@ public class Buscaminas {
 		}
 		return tabla;
 	}
-	public static int casilla(int seleccionar, int[] tabla) {
+	public static int casilla(int seleccionar,char[] tabla) {
 		// TODO Auto-generated method stub
 		if (tabla[seleccionar]==-1) {
 			System.out.println("¡Has pisado una mina! Has perdido.");
@@ -45,5 +44,4 @@ public class Buscaminas {
 			return 0; //0 significa que no ha pisado una mina
 		}
 	}
-
 	}
