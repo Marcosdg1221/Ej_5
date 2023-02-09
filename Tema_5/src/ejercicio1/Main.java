@@ -7,12 +7,13 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner all = new Scanner(System.in);
 		int tabla[] = new int[20];
-		int casillaCaida[]= new int[20];
 		int seleccionar;
-		tabla = Buscaminas.ponMinas(tabla);
+		int caída;
+		int partidas=14;
+		tabla = Buscaminas.ponMinasPistas(tabla);
 		System.out.println(Arrays.toString(tabla));
-		System.out.println("¿Qué casilla quieres pisar?");
+		System.out.println("Hay un buscaminas unidimensional de 20 casillas, del uno al 20, ¿Qué casilla quieres pisar?");
 		seleccionar = all.nextInt();
-		//casillaCaida=Buscaminas.casilla(tabla);
+		caída=Buscaminas.casilla(seleccionar, tabla);
 	}
 }
