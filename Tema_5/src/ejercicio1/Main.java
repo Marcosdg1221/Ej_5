@@ -13,6 +13,6 @@ public class Main {
 		System.out.println(Arrays.toString(tabla));
 		System.out.println("¿Qué casilla quieres pisar?");
 		seleccionar = all.nextInt();
-		casillaCaida=Buscaminas.casilla(tabla);
+		//casillaCaida=Buscaminas.casilla(tabla);
 	}
 }
