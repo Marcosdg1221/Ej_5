@@ -38,13 +38,20 @@ public class Main {
 
 		
 		if (puntosJ1>puntosJ2 & puntosJ1<8) {
+			if (puntosJ1<8) {
 			System.out.println("¡Ganó Jugador1!");	
 		}
-		else if (puntosJ2<8) {
-			System.out.println("¡Ganó Jugador2!");
-		}
-		else {
+			else {
 			System.out.println("¡Empate!");
+				}
+			}
+		else if (puntosJ2<8) {
+			if (puntosJ2>puntosJ1 | puntosJ1>7) {
+				System.out.println("¡Ganó Jugador2!");	
+			}
+				else {
+				System.out.println("¡Empate!");
+					}
 		}
 	}
 }
