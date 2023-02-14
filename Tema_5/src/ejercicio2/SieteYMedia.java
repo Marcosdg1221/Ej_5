@@ -1,4 +1,4 @@
-package ejercicio2;
+package ejercicio2; //Ctrl+7 Comentas todo lo seleccionado 
 
 import java.util.*; //Importamos el java.util que necesitamos
 
@@ -16,13 +16,12 @@ public class SieteYMedia {
 		return cartas;
 	}
 
-	public static int Sacarta(int cartasacáh) { // Saca una carta aleatoria
+	public static double Sacarta(double cartasacáh) { // Saca una carta aleatoria
 		// TODO Auto-generated method stub
-		
-		//double cartaes = (Math.random() * 3); Puedes hacer que devuelva double y que si saca sota caballo o rey sume 0,5, si no, sumas lo del int de abajo
-		
-		
-		int cartas = (int) (Math.random() * 10); 
+
+		double cartaes = 0.5;
+
+		int cartas = (int) (Math.random() * 10);
 		switch (cartas) { // Avisa de qué carta ha sacado y la suma.
 		case 0:
 			cartas = 1;
@@ -52,20 +51,13 @@ public class SieteYMedia {
 			cartas = 7;
 			System.out.println("¡Sacaste un siete!");
 			break;
-
-		case 7:
-			cartas = (int) 0.5;
-			System.out.println("¡Sacaste una sota!");
-			break;
-		case 8:
-			cartas = (int) 0.5;
-			System.out.println("¡Sacaste un caballo!");
-			break;
-		case 9:
-			cartas = (int) 0.5;
-			System.out.println("¡Sacaste un rey!");
 		}
-		return cartas;
+		if (cartas > 7) {
+			System.out.println("¡Sacaste una sota, caballo o rey!");
+			return cartaes;
+			
+		} else {
+			return cartas;
+		}
 	}
-
 }
