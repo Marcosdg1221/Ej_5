@@ -6,7 +6,7 @@ public class Main {
 //Arrays.fill te podría rellenar con guiones, o lo que quieras
 	public static void main(String[] args) {
 		Scanner all = new Scanner(System.in);
-		char tabla[] = new char[20]; // La tabla completa con las minas y pistas
+		int[] tabla = new int[20]; // La tabla completa con las minas y pistas
 		int seleccionar; // será la casilla a seleccionar
 		int caída; // Indica el efecto sobre la casilla en el que se eligió
 		int partidas = 14; // Como hay 6 minas y la tabla hay diez casillas, si el jugador pasa 14 partidas

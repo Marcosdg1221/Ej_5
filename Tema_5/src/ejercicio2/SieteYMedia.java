@@ -18,50 +18,54 @@ public class SieteYMedia {
 
 	public static int Sacarta(int cartasacáh) { // Saca una carta aleatoria
 		// TODO Auto-generated method stub
-		int cartaes = (int) (Math.random() * 10); 
-		switch (cartaes) { // Avisa de qué carta ha sacado y la suma.
+		
+		//double cartaes = (Math.random() * 3); Puedes hacer que devuelva double y que si saca sota caballo o rey sume 0,5, si no, sumas lo del int de abajo
+		
+		
+		int cartas = (int) (Math.random() * 10); 
+		switch (cartas) { // Avisa de qué carta ha sacado y la suma.
 		case 0:
-			cartaes = 1;
+			cartas = 1;
 			System.out.println("¡Sacaste un uno!");
 			break;
 		case 1:
-			cartaes = 2;
+			cartas = 2;
 			System.out.println("¡Sacaste un dos!");
 			break;
 		case 2:
-			cartaes = 3;
+			cartas = 3;
 			System.out.println("¡Sacaste un tres!");
 			break;
 		case 3:
-			cartaes = 4;
+			cartas = 4;
 			System.out.println("¡Sacaste un cuatro!");
 			break;
 		case 4:
-			cartaes = 5;
+			cartas = 5;
 			System.out.println("¡Sacaste un cinco!");
 			break;
 		case 5:
-			cartaes = 6;
+			cartas = 6;
 			System.out.println("¡Sacaste un seis!");
 			break;
 		case 6:
-			cartaes = 7;
+			cartas = 7;
 			System.out.println("¡Sacaste un siete!");
 			break;
 
 		case 7:
-			cartaes = (int) 0.5;
+			cartas = (int) 0.5;
 			System.out.println("¡Sacaste una sota!");
 			break;
 		case 8:
-			cartaes = (int) 0.5;
+			cartas = (int) 0.5;
 			System.out.println("¡Sacaste un caballo!");
 			break;
 		case 9:
-			cartaes = (int) 0.5;
+			cartas = (int) 0.5;
 			System.out.println("¡Sacaste un rey!");
 		}
-		return cartaes;
+		return cartas;
 	}
 
 }
